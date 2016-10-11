@@ -1,0 +1,9 @@
+<h4> Experience</h4>
+<div>
+</div>
+<div class="col-md-4"><input type="text" #listFilter (keyup)="0" placeholder="Search Company"/></div>
+	<div class="job-box" *ngFor="#job of jobs | companyFilter:listFilter.value ">  
+		 <p>{{ job.Company }}</p>
+		 <p>{{ job.period }}</p>
+		 <p>{{ job.position }}</p>
+	</div> 
